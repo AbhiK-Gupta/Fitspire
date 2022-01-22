@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="An example pen showing how a basic CSS Grid container can create a nice, responsive card layout.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FITSPIRE</title>
+
+<style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 6rem;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 114rem;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+@media (max-width: 60em) {
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+.grid__item {
+  background-color: #fff;
+  border-radius: .4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.grid__item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 3rem 8rem #00b3b3;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+.card__content {
+  padding: 3rem 3rem;
+}
+.card__header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+.card__btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: .4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card__btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+.card__btn:hover, .card__btn:active {
+  background-color: #dce4ff;
+}
+.card__btn:hover span, .card__btn:active span {
+  margin-left: 1.5rem;
+}
+
+</style>
+
+
+
+  </head>
+</html>
+<div class="grid">
+ <a >   <div class="grid__item">
+    <div class="card"><img class="card__img" src="m.jpg">
+      <div class="card__content">
+         
+        <p class="card__text"><b>BREAKFAST</b><br>1.Honey roasted oats 20gms with 150ml milk<br>2.Two brown bread with 2 tbsp peanut butter,4 almonds and 4 cashews<br>3.25gms cottage cheese </p>
+     
+      </div>
+    </div>
+  </div>
+</a>
+ <a >  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="s1.jpg">
+      <div class="card__content">
+        
+        <p class="card__text"><b>SNACK 1</b><br>1.Two moong dal cheela<br>2.Boiled black chickpeas (Raw weight:70gms)<br>3.One banana<br><br><br></p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+ <a >  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="aft.jpg">
+      <div class="card__content">
+        
+        <p class="card__text"><b>LUNCH</b><br>1.Cooked Daal 250gms<br>2.Two chapati with 0.5tbsp ghee<br>3.Low fat cottage cheese 90gms <br><br><br><br></p>
+      
+        <div class="grid"></div>
+      </div>
+    </div>
+  </div>
+</a>
+
+ <a >   <div class="grid__item">
+    <div class="card"><img class="card__img" src="s2.jpg">
+      <div class="card__content">
+         
+        <p class="card__text"><b>SNACK 2</b><br>1.Whey protein 1 scoop<br>2.Apple and banana with 3tbsp peanut butter<br><br></p>
+     
+      </div>
+    </div>
+  </div>
+</a>
+<a >  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="n.jpg">
+      <div class="card__content">
+        
+        <p class="card__text"><b>DINNER</b><br>1.Cooked Daal 250gms<br>2.Two chapati with 0.5tbsp ghee<br>3.Low fat cottage cheese 90gms <br><br></p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+

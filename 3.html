@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+      var number = sessionStorage.getItem("cal");
+var n1= +number+250;
+var n2= number-250;
+var r=n1%100;
+var r1=n2%100;
+if(r<=50){n1=n1-r;}
+if(r>50){n1=+n1+(100-r);}
+if(r1<=50){n2=n2-r1;}
+if(r1>50){n2=+n2+(100-r1);}
+function myFunction() {
+document.getElementById("wg").innerHTML = n1;
+document.getElementById("wl").innerHTML = n2;
+    }
+function gain(){
+if(n1==2600){window.open("2600.html");}
+if(n1==2700){window.open("2700.html");}
+if(n1==2800){window.open("2800.html");}
+if(n1==2900){window.open("2900.html");}
+ if(n1==3000){window.open("3000.html");}
+ if(n1==3100){window.open("3100.html");}
+ if(n1==3200){window.open("3200.html");}
+ if(n1==3300){window.open("3300.html");}
+}
+function loss(){
+if(n2==2600){window.open("2600.html");}
+if(n2==2700){window.open("2700.html");}
+if(n2==2800){window.open("2800.html");}
+if(n2==2900){window.open("2900.html");}
+if(n2==3000){window.open("3000.html");}
+if(n2==3100){window.open("3100.html");}
+if(n2==3200){window.open("3200.html");}
+if(n2==3300){window.open("3300.html");}
+}
+</script>
+
+
+
+
+
+
+<style>
+
+body{
+background-repeat: no-repeat;
+background-image: url('bg.png');
+background-color:#000000;
+  background-position: center;
+  background-attachment: fixed;       
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%; 
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.box{
+margin-top: 100px;
+height:280px;
+border-radius: 17px;
+width: 300px;
+padding: 25px;
+transform: translate(-0.5%,-50%);
+background: #e6e6e6;
+text-align: center;
+}
+.box label{font-family:Helvetica}
+.box p{
+font-family:Helvetica;
+color: black;
+font-size:20px;
+text-transform:uppercase;
+font-weight: 400;
+}
+
+
+.box input[type="number"],.box input[type="password"],.box select
+{
+border:0;
+background: none;
+display: block;
+margin:20px auto;
+test-align: center;
+border:2px solid #3498db;
+padding: 10px 8px;
+width:200px;
+outline:none;
+color: black;
+border-radius: 24px;
+transition: 0.25s;
+}
+.box h1{
+font-family:Helvetica;
+color: black;
+text-transform:uppercase;
+font-weight: 500;
+}
+.but{margin: -190px 40px}
+.but input[type="submit"]
+{
+border:1px solid #ffffff;
+margin-top: 8%;
+margin-left:42%;
+display: block;
+
+test-align: center;
+padding: 10px 8px;
+width:190px;
+outline:none;
+color: White;
+transition: 0.25s;
+cursor: pointer;
+background-color: #000000; 
+font-size: 15px;
+transition:0.35s;
+}
+
+
+
+
+.but input[type="submit"]:hover{background: #ffffff; color: black}
+.box input[type="number"]:focus,.box input[type="password"]:focus,.box select:focus{
+width: 210px;
+border-color:#e73c7e ;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+<body onload="myFunction()">
+
+<div style="display: flex;justify-content: center;align-items: center;height: 125px;">
+<p></p>
+</div>
+
+<div style="display: flex;justify-content: center;align-items: center;height: 375px;">
+<form class="box" action="" method="post">
+<p>CALORIES FOR WEIGHT GAIN</p>
+<h1> <span id="wg"></span></h1>
+<button onclick="gain()">DIET!</button>
+<p>CALORIES FOR WEIGHT LOSS</p>
+<h1> <span id="wl"></span></h1>
+<button onclick="loss()">DIET!</button>
+</form>
+</div>
+<div class="but">
+
+
+<a href="choice.html"><input type="submit" name="" value="ONLINE TRAINING" onClick=""></a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

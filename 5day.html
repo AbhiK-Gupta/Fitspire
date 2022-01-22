@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="An example pen showing how a basic CSS Grid container can create a nice, responsive card layout.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FITSPIRE</title>
+
+<style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 6rem;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 114rem;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+@media (max-width: 60em) {
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+.grid__item {
+  background-color: #fff;
+  border-radius: .4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.grid__item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 3rem 8rem #00b3b3;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+.card__content {
+  padding: 3rem 3rem;
+}
+.card__header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+.card__btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: .4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card__btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+.card__btn:hover, .card__btn:active {
+  background-color: #dce4ff;
+}
+.card__btn:hover span, .card__btn:active span {
+  margin-left: 1.5rem;
+}
+
+</style>
+
+
+
+  </head>
+</html>
+<div class="grid">
+ <a >   <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Snowy Mountains">
+      <div class="card__content">
+         
+        <p class="card__text"><b>CHEST</b><br>1.Bench press 3 sets of 10-12 reps<br>2.Incline dumbell press 3 sets of 10-12 reps<br>3.Low cable fly 3 sets of 10-12 reps<br>4.Pec fly 3 sets of 10-12 
+reps<br><b>SHOULDER</b><br>1.Dumbell shoulder press 3 sets of 10-12 reps<br>2.Lateral raise 3 sets of 10-12 reps<br>3.Face pull 3 sets of 10-12 reps<br><b>TRICEPS</b><br>1.Tricep pushdown 3 sets of 10-12 reps<br>2.Skullcrushers 3 sets of 10-12 reps</p>
+     
+      </div>
+    </div>
+  </div>
+</a>
+ <a >  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Desert">
+      <div class="card__content">
+        
+        <p class="card__text"><b>BACK</b><br>1.Lat pulldown 3 sets of 10-12 reps<br>2.Single hand seated row 3 sets of 10-12 reps<br>3.Underhand barbell row 3 sets of 10-12 reps<br>4.Cable Pullovers 3 sets of 10-12 reps
+<br><b>BICEPS</b><br>1.Barbell curls 3 sets of 10-12 reps<br>2.Hammer curls 3 sets of 10-12 reps<br>3.Single hand cable curl 3 sets of 10-12 reps<br><br><br></p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+ <a >  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1506318164473-2dfd3ede3623?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=3300&amp;q=80" alt="Canyons">
+      <div class="card__content">
+        
+        <p class="card__text"><b>LEGS</b><br>1.Squats 4 sets of 10-12 reps<br>2.Leg press 4 sets of 10-12 reps<br>3.Leg curls 4 sets of 10-12 reps<br>4.Leg extension 4 sets of 10-12 reps<br>5.Calf raise 4 sets of 10-12 reps<br><br><br><br><br><br><br><br><br><br> </p>
+      
+        <div class="grid"></div>
+      </div>
+    </div>
+  </div>
+</a>
+
+ <a >   <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Snowy Mountains">
+      <div class="card__content">
+         
+        <p class="card__text"><b>CHEST</b><br>1.Bench press 3 sets of 10-12 reps<br>2.Incline dumbell press 3 sets of 10-12 reps<br>3.Low cable fly 3 sets of 10-12 reps<br>4.Pec fly 3 sets of 10-12 
+reps<br><b>SHOULDER</b><br>1.Dumbell shoulder press 3 sets of 10-12 reps<br>2.Lateral raise 3 sets of 10-12 reps<br>3.Face pull 3 sets of 10-12 reps<br><b>TRICEPS</b><br>1.Tricep pushdown 3 sets of 10-12 reps<br>2.Skullcrushers 3 sets of 10-12 reps</p>
+     
+      </div>
+    </div>
+  </div>
+</a>
+<a >  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Desert">
+      <div class="card__content">
+        
+        <p class="card__text"><b>BACK</b><br>1.Lat pulldown 3 sets of 10-12 reps<br>2.Single hand seated row 3 sets of 10-12 reps<br>3.Underhand barbell row 3 sets of 10-12 reps<br>4.Cable Pullovers 3 sets of 10-12 reps
+<br><b>BICEPS</b><br>1.Barbell curls 3 sets of 10-12 reps<br>2.Hammer curls 3 sets of 10-12 reps<br>3.Single hand cable curl 3 sets of 10-12 reps<br><br><br></p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+

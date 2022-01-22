@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+function calories()
+{
+var x= 22;
+        num1 = document.getElementById("we").value;
+        num2 = document.getElementById("he").value;
+        num3 = document.getElementById("ag").value;
+
+var e = document.getElementById("gender");
+var strUser = e.value; 
+var e1 = document.getElementById("Act");
+var strUser1 = e1.value; 
+
+if(strUser=='1')
+{
+if(strUser1=='1'){x=((10*num1)+(6.25*num2)-(5*num3)+5)*1.375;}
+else if (strUser1=='2'){x=((10*num1)+(6.25*num2)-(5*num3)+5)*1.465;}
+else if (strUser1=='3'){x=((10*num1)+(6.25*num2)-(5*num3)+5)*1.55;}
+else if (strUser1=='4'){x=((10*num1)+(6.25*num2)-(5*num3)+5)*1.725;}
+else if (strUser1=='5'){x=((10*num1)+(6.25*num2)-(5*num3)+5)*1.9;}
+
+}
+else{
+if(strUser1=='1'){x=((10*num1)+(6.25*num2)-(5*num3)-161)*1.375;}
+else if (strUser1=='2'){x=((10*num1)+(6.25*num2)-(5*num3)-161)*1.465;}
+else if (strUser1=='3'){x=((10*num1)+(6.25*num2)-(5*num3)-161)*1.55;}
+else if (strUser1=='4'){x=((10*num1)+(6.25*num2)-(5*num3)-161)*1.725;}
+else if (strUser1=='5'){x=((10*num1)+(6.25*num2)-(5*num3)-161)*1.9;}
+
+
+}
+
+if(x==6.875){
+alert("PLEASE ENTER DETAILS");}
+else{
+sessionStorage.setItem("cal", Math.round(x));
+window.location.href = "3.html";
+}
+
+
+}
+
+</script>
+
+
+
+
+
+
+<style>
+
+body{
+background-repeat: no-repeat;
+background-image: url('bg.png');
+background-color:#000000;
+  background-position: center;
+  background-attachment: fixed;       
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%; 
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.box{
+
+border-radius: 17px;
+width: 300px;
+padding: 25px;
+transform: translate(-0.5%,-50%);
+background: #e6e6e6;
+text-align: center;
+}
+.box label{font-family:Helvetica}
+
+
+
+.box input[type="number"],.box input[type="password"],.box select
+{
+border:0;
+background: none;
+display: block;
+margin:20px auto;
+test-align: center;
+border:2px solid #595959;
+padding: 10px 8px;
+width:200px;
+outline:none;
+color: black;
+border-radius: 24px;
+transition: 0.25s;
+}
+.box h1{
+font-family:candara;
+color: black;
+text-transform:uppercase;
+font-weight: 400;
+}
+.but{margin: -190px 40px}
+.but input[type="submit"]
+{
+border:0;
+display: block;
+margin:20px auto;
+test-align: center;
+padding: 10px 8px;
+width:100px;
+border:1px solid #ffffff;
+outline:none;
+color: White;
+transition: 0.25s;
+cursor: pointer;
+background-color: #000000; 
+font-size: 15px;
+transition:0.35s;
+}
+.but input[type="submit"]:hover{background: #ffffff; color: black}
+.box input[type="number"]:focus,.box input[type="password"]:focus,.box select:focus{
+width: 210px;
+border-color:#000000 ;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+<body>
+
+<div style="display: flex;justify-content: center;align-items: center;height: 350px;">
+<p></p>
+</div>
+
+<div style="display: flex;justify-content: center;align-items: center;height: 100%;">
+<form class="box" action="" method="post">
+<h1>ENTER DETAILS</h1>
+<input type="number" name="" id="we"placeholder="Weight(kg)">
+<input type="number" name="" id="he" placeholder="Height(cm)">
+<input type="number" name="" id="ag" placeholder="Age">
+<label for="gen">Gender:</label>
+  <select id="gender" >
+    <option value="1" id="10">Male</option>
+    <option value="2" id="20">Female</option>
+  </select>
+
+<label for="al" text-style>Activity:</label>
+  <select name="ALL" id="Act" >
+    <option value="1" id="l">Light</option>
+    <option value="2" id="m">Moderate</option>
+    <option value="3" id="a">Active</option>
+    <option value="4" id="v">Very active</option>
+    <option value="5" id="e">Extra active</option>
+  
+  </select>
+
+</form>
+</div>
+<div class="but">
+
+<input type="submit" name="" value="SUBMIT" onClick="calories()">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
